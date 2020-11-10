@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>Time adder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/uikit/uikit.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+    <div class="uk-text-center">
+        <h1>Time adder</h1>
+    </div>
+    <form class="uk-form-stacked">
+        <div class="uk-grid-column-small uk-flex-center uk-grid-row-large uk-child-width-auto" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-legend">Time 1</legend>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Hours</label>
+                            <div class="uk-form-controls" for="hr1">
+                                <input class="uk-input uk-form-width-medium" id="hr1" type="number" min="0" max="23" required>
+                            </div>
+                            <label class="uk-form-label">Minutes</label>
+                            <div class="uk-form-controls" for="min1">
+                                <input class="uk-input uk-form-width-medium" id="min1" type="number" min="0" max="59" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-legend">Time 2</legend>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Hours</label>
+                            <div class="uk-form-controls" for="hr2">
+                                <input class="uk-input uk-form-width-medium" id="hr2" type="number" min="0" max="23" required>
+                            </div>
+                            <label class="uk-form-label">Minutes</label>
+                            <div class="uk-form-controls" for="min2">
+                                <input class="uk-input uk-form-width-medium" id="min2" type="number" min="0" max="59" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+        </div>
+        <div class="uk-margin uk-text-center">
+            <div>
+                <h4>Total time <span id="timeText">-</span></h4>
+            </div>
+            <button class="uk-button uk-button-primary uk-margin" id="calculate">Calculate</button>
+        </div>
+
+
+    </form>
+
+
+
+    <script src="./assets/uikit/uikit.js"></script>
+    <script src="./assets/uikit/uikit-icons.js"></script>
+    <script src="./assets/index.js"></script>
+</body>
+</html>
