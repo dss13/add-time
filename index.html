@@ -7,57 +7,67 @@
     <link rel="manifest" href="./manifest.webmanifest">
 </head>
 <body>
-    <div class="uk-text-center">
-        <h1>Time adder</h1>
+    <div class="uk-position-center">
+        <div class="uk-text-center">
+            <h3 id="display-time">Worked for:
+                <span id="all-time">
+                    <span id="timeH">0</span>h <span id="timeM">0</span>m
+                </span>
+            </h3>
+        </div>
+
+        <form class="uk-form-stacked">
+            <div class="uk-grid-column-small uk-flex-center uk-grid-row-large uk-child-width-auto" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body" id="time-card">
+                        <fieldset class="uk-fieldset">
+                            <legend class="uk-legend">Increment by</legend>
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Hours</label>
+                                <div class="uk-form-controls" for="hr1">
+                                    <input class="uk-input uk-form-width-medium" id="hr1" value="0" type="number" min="0" max="23" required>
+                                </div>
+                                <label class="uk-form-label">Minutes</label>
+                                <div class="uk-form-controls" for="min1">
+                                    <input class="uk-input uk-form-width-medium" id="min1" value="0" type="number" min="0" max="59" required>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="uk-text-center">
+                            <!-- <div>
+                                <h4>Total time <span id="timeText">-</span></h4>
+                            </div> -->
+                            <button class="uk-button uk-button-primary" id="calculate">Done</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <fieldset class="uk-fieldset">
+                            <legend class="uk-legend">Time 2</legend>
+                            <div class="uk-margin">
+                                <label class="uk-form-label">Hours</label>
+                                <div class="uk-form-controls" for="hr2">
+                                    <input class="uk-input uk-form-width-medium" id="hr2" value="0" type="number" min="0" max="23" required>
+                                </div>
+                                <label class="uk-form-label">Minutes</label>
+                                <div class="uk-form-controls" for="min2">
+                                    <input class="uk-input uk-form-width-medium" id="min2" value="0" type="number" min="0" max="59" required>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div> -->
+
+            </div>
+
+
+        </form>
     </div>
-    <form class="uk-form-stacked">
-        <div class="uk-grid-column-small uk-flex-center uk-grid-row-large uk-child-width-auto" uk-grid>
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">
-                    <fieldset class="uk-fieldset">
-                        <legend class="uk-legend">Time 1</legend>
-                        <div class="uk-margin">
-                            <label class="uk-form-label">Hours</label>
-                            <div class="uk-form-controls" for="hr1">
-                                <input class="uk-input uk-form-width-medium" id="hr1" value="0" type="number" min="0" max="23" required>
-                            </div>
-                            <label class="uk-form-label">Minutes</label>
-                            <div class="uk-form-controls" for="min1">
-                                <input class="uk-input uk-form-width-medium" id="min1" value="0" type="number" min="0" max="59" required>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
 
-            <div>
-                <div class="uk-card uk-card-default uk-card-body">
-                    <fieldset class="uk-fieldset">
-                        <legend class="uk-legend">Time 2</legend>
-                        <div class="uk-margin">
-                            <label class="uk-form-label">Hours</label>
-                            <div class="uk-form-controls" for="hr2">
-                                <input class="uk-input uk-form-width-medium" id="hr2" value="0" type="number" min="0" max="23" required>
-                            </div>
-                            <label class="uk-form-label">Minutes</label>
-                            <div class="uk-form-controls" for="min2">
-                                <input class="uk-input uk-form-width-medium" id="min2" value="0" type="number" min="0" max="59" required>
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-
-        </div>
-        <div class="uk-margin uk-text-center">
-            <div>
-                <h4>Total time <span id="timeText">-</span></h4>
-            </div>
-            <button class="uk-button uk-button-primary uk-margin" id="calculate">Calculate</button>
-        </div>
-
-
-    </form>
 
 
 
