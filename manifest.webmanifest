@@ -1,6 +1,6 @@
 {
-    "name": "Time adder",
-    "short_name": "TimeAdder",
+    "name": "Time calc",
+    "short_name": "TimeCalc",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#fff",
