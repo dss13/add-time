@@ -37,6 +37,11 @@ button.addEventListener('click', (e) => {
 
 })
 
+document.getElementById('reset-btn').addEventListener('click', e => {
+    e.preventDefault();
+    location.reload();
+})
+
 focusableInputs.forEach(element => {
     element.addEventListener('focus', (e) => {
         if (e.target.value == '0') {

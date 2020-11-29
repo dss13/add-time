@@ -9,17 +9,18 @@
 <body>
     <div class="uk-position-center">
         <div class="uk-text-center">
-            <h4 id="display-time"><span class="uk-text-small uk-text-muted">You worked for:</span>
+            <h4 id="display-time" class="uk-animation-fade"><span class="uk-text-small uk-text-muted">You worked for:</span>
                 <span id="all-time">
                     <span id="timeH">0</span>h <span id="timeM">0</span>m
                 </span>
+                <button class="uk-button uk-text-danger uk-margin-left uk-button-link" id="reset-btn">Reset</button>
             </h4>
         </div>
 
         <form class="uk-form-stacked">
             <div class="uk-grid-column-small uk-flex-center uk-grid-row-large uk-child-width-auto" uk-grid>
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body" id="time-card">
+                    <div class="uk-card uk-card-default uk-card-body uk-animation-slide-bottom-small" id="time-card">
                         <fieldset class="uk-fieldset">
                             <legend class="uk-legend">Increment by</legend>
                             <div class="uk-margin">
