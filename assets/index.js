@@ -6,6 +6,7 @@ const card = document.querySelector('#time-card')
 const button = document.querySelector('#calculate');
 const display = document.querySelector('#display-time')
 const jTime = document.querySelector('#all-time')
+const focusableInputs = document.querySelectorAll('.focus-change-value')
 button.addEventListener('click', (e) => {
     e.preventDefault()
     card.classList.remove("uk-animation-slide-bottom-small");
@@ -16,7 +17,7 @@ button.addEventListener('click', (e) => {
     const mins = parseInt(totalMins % 60);
     hr2.innerText = hrs;
     min2.innerText = mins;
-    hr1.value = 0;
+    hr1.value = '';
     min1.value = 0;
     if (hrs < 4) {
         jTime.classList.remove('uk-text-success')
@@ -30,6 +31,22 @@ button.addEventListener('click', (e) => {
     card.classList.add("uk-animation-slide-bottom-small");
     display.classList.add("uk-animation-fade")
 
+    hr1.focus();
+
     // document.querySelector('#timeText').innerHTML = `${hrs}h ${mins}m`
 
+})
+
+focusableInputs.forEach(element => {
+    element.addEventListener('focus', (e) => {
+        if (e.target.value == '0') {
+            e.target.value = ''
+        }
+    })
+
+    element.addEventListener('blur', e => {
+        if (e.target.value == '') {
+            e.target.value = '0'
+        }
+    })
 })
