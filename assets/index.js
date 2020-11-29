@@ -3,16 +3,16 @@ const hr2 = document.querySelector("#timeH");
 const min1 = document.querySelector("#min1");
 const min2 = document.querySelector("#timeM");
 const card = document.querySelector('#time-card')
-const button = document.querySelector('#calculate');
+const button = document.querySelector('#add-calculate');
+const diffButton = document.querySelector('#diff-calculate');
 const display = document.querySelector('#display-time')
 const jTime = document.querySelector('#all-time')
 const focusableInputs = document.querySelectorAll('.focus-change-value')
-button.addEventListener('click', (e) => {
-    e.preventDefault()
+const arthimetic = (multiplier) => {
     card.classList.remove("uk-animation-slide-bottom-small");
     display.classList.remove("uk-animation-fade")
 
-    const totalMins = parseInt(parseInt((parseInt(hr1.value) + parseInt(hr2.innerText)) * 60) + parseInt(min1.value) + parseInt(min2.innerText));
+    const totalMins = parseInt(parseInt((parseInt(hr1.value) * multiplier + parseInt(hr2.innerText)) * 60) + parseInt(min1.value) * multiplier + parseInt(min2.innerText));
     const hrs = parseInt(totalMins / 60);
     const mins = parseInt(totalMins % 60);
     hr2.innerText = hrs;
@@ -32,10 +32,24 @@ button.addEventListener('click', (e) => {
     display.classList.add("uk-animation-fade")
 
     hr1.focus();
+}
+button.addEventListener('click', (e) => {
+    e.preventDefault()
+    arthimetic(1);
 
     // document.querySelector('#timeText').innerHTML = `${hrs}h ${mins}m`
 
 })
+
+diffButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    arthimetic(-1);
+
+    // document.querySelector('#timeText').innerHTML = `${hrs}h ${mins}m`
+
+})
+
+
 
 document.getElementById('reset-btn').addEventListener('click', e => {
     e.preventDefault();
